@@ -1,0 +1,7 @@
+/dist
+/coverage
+/build
+node_modules
+.next
+.vercel
+pnpm-lock.yaml
