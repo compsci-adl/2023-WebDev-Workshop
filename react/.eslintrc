@@ -318,6 +318,13 @@
       }
     },
     {
+      "files": ["*.jsx"],
+      "rules": {
+        "react/prop-types": "off",
+        "security/detect-object-injection": "off"
+      }
+    },
+    {
       "files": ["*.js"],
       "extends": ["plugin:jsdoc/recommended-typescript-flavor-error"],
       "rules": {
