@@ -1,0 +1,51 @@
+.greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.greetingTitle {
+    color: var(--text-active);
+    font-size: 2rem;
+}
+
+.contactButtons {
+    display: flex;
+    /* TODO show this before responsive design */
+    /* flex-direction: row; */
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .contactButtons {
+        flex-direction: row;
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projectCards {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    /* TODO show this before the responsive version */
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .projectCards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .projectCards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
