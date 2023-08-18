@@ -1,48 +1,30 @@
 'use client';
 
 import styles from './page.module.css';
+import Comment from '../components/comment/comment.jsx';
 import { v4 } from 'uuid';
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 
 export default function GuestBook() {
     /* TODO explain useState and how its different from the vanilla approach */
     const [comments, setComments] = useState([]);
-    const [name, setName] = useState('');
-    const [content, setContent] = useState('');
 
     /* Maybe explain why useCallback is used to prevent unnecessary re-renders? */
-    const handleSubmit = useCallback(
-        (event) => {
-            event.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        const newComment = {
+            // Creating a unique id for each comment using 'v4()'
+            id: v4(),
+            name: data.get('name'),
+            content: data.get('content'),
+            nLikes: 0,
+            hasLiked: false,
+        };
 
-            const newComment = {
-                id: v4(),
-                name,
-                content,
-                nLikes: 0,
-                hasLiked: false,
-            };
-
-            setComments([...comments, newComment]);
-            setName('');
-            setContent('');
-        },
-        [comments, name, content]
-    );
-
-    const updateName = useCallback((e) => {
-        setName(e.target.value);
-    }, []);
-
-    const updateContent = useCallback((e) => {
-        setContent(e.target.value);
-    }, []);
-
-    const updateLikes = (index) => {
-        const updatedComments = [...comments];
-        updatedComments[index].nLikes += updatedComments[index].hasLiked ? -1 : 1;
-        updatedComments[index].hasLiked = !updatedComments[index].hasLiked;
-        setComments(updatedComments);
+        setComments([...comments, newComment]);
+        // Reset input fields
+        event.target.reset();
     };
 
     return (
@@ -58,8 +40,6 @@ export default function GuestBook() {
                         type="text"
                         maxLength="20"
                         required
-                        value={name}
-                        onChange={updateName}
                     />
                     <label htmlFor="guestbook-message">Message</label>
                     <input
@@ -68,8 +48,6 @@ export default function GuestBook() {
                         type="text"
                         maxLength="50"
                         required
-                        value={content}
-                        onChange={updateContent}
                     />
                     <input
                         id="guestbook-button"
@@ -80,17 +58,8 @@ export default function GuestBook() {
                 </form>
 
                 <section id="guestbook-comments" className={styles.guestbookComments}>
-                    {comments.map((comment, index) => (
-                        <div key={comment.id} className={styles.guestbookComment}>
-                            <h3>{comment.name}</h3>
-                            <p className={styles.commentContent}>{comment.content}</p>
-                            <button
-                                onClick={() => updateLikes(index)}
-                                className={styles.likeButton}
-                            >
-                                {`${comment.nLikes} likes`}
-                            </button>
-                        </div>
+                    {comments.map((comment) => (
+                        <Comment key={comment.id} comment={comment} />
                     ))}
                 </section>
             </main>
