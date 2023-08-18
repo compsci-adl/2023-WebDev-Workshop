@@ -14,7 +14,8 @@
         "plugin:security/recommended",
         "plugin:no-unsanitized/DOM",
         "plugin:@next/next/recommended",
-        "plugin:react-hooks/recommended"
+        "plugin:react-hooks/recommended",
+        "next"
       ],
       "plugins": ["import", "tailwindcss", "jsdoc"],
       "rules": {
