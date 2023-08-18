@@ -321,7 +321,8 @@
       "files": ["*.jsx"],
       "rules": {
         "react/prop-types": "off",
-        "security/detect-object-injection": "off"
+        "security/detect-object-injection": "off",
+        "react-perf/jsx-no-new-function-as-prop": "off"
       }
     },
     {
