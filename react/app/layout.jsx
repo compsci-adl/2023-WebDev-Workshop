@@ -1,6 +1,6 @@
 import './styles/globals.css';
 import { Inter } from 'next/font/google';
-import Navbar from './components/navbar/navbar';
+import Navbar from './components/navbar/navbar.jsx';
 
 // eslint-disable-next-line new-cap
 const inter = Inter({ subsets: ['latin'] });

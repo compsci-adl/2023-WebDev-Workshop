@@ -1,5 +1,3 @@
-import SocialLink from './components/social-link/social-link';
-import ProjectCard from './components/project-card/project-card';
 import styles from './page.module.css';
 
 const socials = [
@@ -42,13 +40,39 @@ const projects = [
 ];
 
 export default function Home() {
-    /* TODO show how this approach using map and custom component is cleaner than vanilla */
+    /* TODO show how this approach using map is cleaner than vanilla */
     const contactButtons = socials.map(({ title, link }) => {
-        return <SocialLink key={title} title={title} link={link} />;
+        return (
+            <a
+                key={title}
+                href={link}
+                target="_blank"
+                rel="noreferrer noopener"
+                className={styles.linkContainer}
+            >
+                {title}
+                <object
+                    className={styles.arrowIcon}
+                    data="/assets/diagonal-arrow.svg"
+                    type="image/svg+xml"
+                    aria-label="link arrow"
+                ></object>
+            </a>
+        );
     });
 
     const projectCards = projects.map(({ title, description }) => {
-        return <ProjectCard key={title} title={title} description={description} />;
+        return (
+            <button key={title} className={styles.project}>
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <object
+                    data="/assets/diagonal-arrow.svg"
+                    type="image/svg+xml"
+                    aria-label="link arrow"
+                ></object>
+            </button>
+        );
     });
     return (
         <main>
