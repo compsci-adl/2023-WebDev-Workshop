@@ -3,7 +3,7 @@
 
 import styles from './page.module.css';
 import Comment from '../components/comment/comment.jsx';
-import { v4 } from 'uuid';
+import { nanoid } from 'nanoid';
 import { useState } from 'react';
 
 export default function GuestBook() {
@@ -14,8 +14,10 @@ export default function GuestBook() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const newComment = {
-            // Creating a unique id for each comment using 'v4()'
-            id: v4(),
+            /* Creating a unique id for each comment using nanoid.
+            Normally this would be generated server-side by the database
+            but it's here for demonstration purposes*/
+            id: nanoid(),
             name: data.get('name'),
             content: data.get('content'),
             nLikes: 0,
