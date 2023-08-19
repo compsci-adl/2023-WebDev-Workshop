@@ -1,3 +1,4 @@
+/* eslint-env browser */
 'use client';
 
 import styles from './page.module.css';
@@ -9,7 +10,6 @@ export default function GuestBook() {
     /* TODO explain useState and how its different from the vanilla approach */
     const [comments, setComments] = useState([]);
 
-    /* Maybe explain why useCallback is used to prevent unnecessary re-renders? */
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
