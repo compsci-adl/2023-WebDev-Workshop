@@ -75,6 +75,7 @@
 
 .project {
     position: relative;
+    text-align: left;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
