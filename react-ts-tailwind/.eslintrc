@@ -1,0 +1,465 @@
+{
+  "root": true,
+  "plugins": ["@next/next"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": [
+        "eslint:recommended",
+        "prettier",
+        "plugin:unicorn/recommended",
+        "plugin:import/recommended",
+        "plugin:promise/recommended",
+        "plugin:sonarjs/recommended",
+        "plugin:security/recommended",
+        "plugin:no-unsanitized/DOM",
+        "plugin:@next/next/recommended",
+        "plugin:react-hooks/recommended"
+      ],
+      "plugins": ["import", "tailwindcss", "jsdoc"],
+      "rules": {
+        "@next/next/no-html-link-for-pages": "off",
+        "@next/next/no-img-element": "off",
+        "spaced-comment": ["error", "always", { "markers": ["/"] }],
+        "jsx-quotes": ["error", "prefer-double"],
+        "arrow-parens": ["error", "always"],
+        "symbol-description": "error",
+        "prefer-const": ["error", { "destructuring": "any", "ignoreReadBeforeAssign": false }],
+        "prefer-exponentiation-operator": "error",
+        "prefer-numeric-literals": "error",
+        "prefer-object-has-own": "error",
+        "prefer-object-spread": "error",
+        "prefer-promise-reject-errors": "error",
+        "prefer-regex-literals": "error",
+        "prefer-spread": "error",
+        "prefer-template": "error",
+        "prefer-named-capture-group": "error",
+        "default-param-last": "error",
+        "quote-props": ["error", "as-needed"],
+        "require-unicode-regexp": "error",
+        "guard-for-in": "error",
+        "no-use-before-define": ["error", { "functions": false }],
+        "no-duplicate-imports": "off",
+        "no-eval": "error",
+        "no-implied-eval": "error",
+        "no-new-func": "error",
+        "no-script-url": "error",
+        "no-extend-native": "error",
+        "no-var": "error",
+        "no-div-regex": "error",
+        "no-extra-label": "error",
+        "no-extra-bind": "error",
+        "no-template-curly-in-string": "error",
+        "no-floating-decimal": "error",
+        "no-proto": "error",
+        "no-iterator": "error",
+        "no-labels": "error",
+        "no-label-var": "error",
+        "no-lone-blocks": "off",
+        "no-lonely-if": "error",
+        "no-loop-func": "error",
+        "no-new": "error",
+        "no-new-wrappers": "error",
+        "no-promise-executor-return": "error",
+        "no-return-await": "error",
+        "no-shadow": "error",
+        "no-self-compare": "error",
+        "no-throw-literal": "error",
+        "no-unmodified-loop-condition": "error",
+        "no-unused-expressions": "error",
+        "no-unused-private-class-members": "error",
+        "no-useless-call": "error",
+        "no-useless-return": "error",
+        "no-useless-computed-key": "error",
+        "no-void": ["error", { "allowAsStatement": true }],
+        "no-constructor-return": "error",
+        "no-empty-function": ["error", { "allow": ["arrowFunctions", "methods", "constructors"] }],
+        "no-invalid-this": "error",
+        "no-implicit-coercion": "error",
+        "no-mixed-operators": "off",
+        "no-multi-assign": "error",
+        "no-nested-ternary": "error",
+        "no-return-assign": "error",
+        "no-sequences": "error",
+        "no-unneeded-ternary": "error",
+        "no-useless-concat": "error",
+        "no-useless-constructor": "error",
+        "no-useless-rename": "error",
+        "no-alert": "error",
+        "no-caller": "error",
+        "no-else-return": "error",
+        "no-new-object": "error",
+        "no-undef-init": "error",
+        "no-constant-binary-expression": "error",
+        "no-await-in-loop": "error",
+        "no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+        "no-param-reassign": ["error", { "props": false }],
+        "array-callback-return": "error",
+        "new-cap": ["error", { "capIsNewExceptions": [] }], // Ignore Next.js fonts
+        "operator-assignment": ["error", "always"],
+        "require-atomic-updates": "error",
+        "prefer-rest-params": "error",
+        "padding-line-between-statements": [
+          "error",
+          { "blankLine": "always", "prev": "class", "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "class" },
+          { "blankLine": "always", "prev": "function", "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "function" }
+        ],
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "eqeqeq": ["error", "always"],
+        "radix": ["error", "as-needed"],
+        "wrap-iife": "error",
+        "object-shorthand": "error",
+        "yoda": "error",
+        "eol-last": "error",
+        "block-spacing": "error",
+        "camelcase": ["error", { "properties": "always" }],
+        "consistent-this": ["error", "self"],
+        "default-case-last": "error",
+        "dot-notation": "error",
+        "grouped-accessor-pairs": ["error", "getBeforeSet"],
+        "new-parens": "error",
+        "import/no-internal-modules": "off",
+        "import/no-named-as-default": "off",
+        "import/no-unresolved": "error",
+        "import/no-duplicates": "error",
+        "unicorn/custom-error-definition": "error",
+        "unicorn/expiring-todo-comments": "off",
+        "unicorn/filename-case": "off",
+        "unicorn/no-null": "off",
+        "unicorn/prefer-event-target": "error",
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/no-await-expression-member": "off",
+        "unicorn/catch-error-name": ["error", { "name": "err" }],
+        "jsdoc/tag-lines": ["error", "any", { "startLines": 1 }],
+        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/require-description": "error",
+        "jsdoc/require-param": [
+          "error",
+          { "checkDestructuredRoots": false, "checkRestProperty": true }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/strict",
+        "plugin:tailwindcss/recommended",
+        "plugin:import/typescript"
+      ],
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "camelcase": "off",
+        "no-empty-function": "off",
+        "@typescript-eslint/non-nullable-type-assertion-style": "off",
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          { "allow": ["arrowFunctions", "methods", "constructors"] }
+        ],
+        "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/consistent-type-exports": "error",
+        "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+        "@typescript-eslint/no-unnecessary-qualifier": "error",
+        "@typescript-eslint/no-useless-empty-export": "error",
+        "@typescript-eslint/prefer-readonly": "error",
+        "@typescript-eslint/prefer-regexp-exec": "error",
+        "@typescript-eslint/promise-function-async": "error",
+        "@typescript-eslint/require-array-sort-compare": ["error", { "ignoreStringArrays": true }],
+        "@typescript-eslint/strict-boolean-expressions": [
+          "error",
+          {
+            "allowString": true,
+            "allowNumber": true,
+            "allowNullableObject": true,
+            "allowNullableBoolean": true
+          }
+        ],
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
+        "@typescript-eslint/explicit-member-accessibility": "error",
+        "@typescript-eslint/member-delimiter-style": "error",
+        "@typescript-eslint/method-signature-style": "error",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          { "selector": "variableLike", "format": ["camelCase"] },
+          {
+            "selector": "property",
+            "modifiers": ["private"],
+            "format": ["camelCase"],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["global"],
+            "format": ["UPPER_CASE"]
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["destructured"],
+            "format": ["snake_case", "camelCase", "PascalCase"]
+          },
+          {
+            "selector": "parameter",
+            "modifiers": ["destructured"],
+            "format": ["snake_case", "camelCase", "PascalCase"]
+          },
+          {
+            "selector": "parameter",
+            "modifiers": ["unused"],
+            "format": null,
+            "custom": {
+              "regex": "^_*$",
+              "match": true
+            }
+          }
+        ],
+        "@typescript-eslint/no-redundant-type-constituents": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+        "no-dupe-class-members": "off",
+        "@typescript-eslint/no-dupe-class-members": "error",
+        "no-invalid-this": "off",
+        "@typescript-eslint/no-invalid-this": "error",
+        "no-loop-func": "off",
+        "@typescript-eslint/no-loop-func": "error",
+        "no-redeclare": "off",
+        "@typescript-eslint/no-redeclare": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error",
+        "no-unused-expressions": "off",
+        "@typescript-eslint/no-unused-expressions": "error",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
+        "tailwindcss/no-custom-classname": [
+          "error",
+          {
+            "cssFiles": [
+              "**/*.css",
+              "**/*.scss",
+              "!**/node_modules",
+              "!**/.*",
+              "!**/dist",
+              "!**/build"
+            ]
+          }
+        ]
+      },
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "project": ["react-ts-tailwind/tsconfig.json"]
+      },
+      "settings": {
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+          "typescript": {
+            "alwaysTryTypes": true,
+            "project": ["./tsconfig.json"]
+          },
+          "node": true
+        },
+        "linkComponents": ["Link"]
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "@typescript-eslint/consistent-type-imports": "off"
+      }
+    },
+    {
+      "files": ["*.jsx", ".tsx"],
+      "extends": [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react-perf/all"
+      ],
+      "settings": {
+        "import/core-modules": ["styled-jsx/css"],
+        "react/no-danger": "error",
+        "react/no-unsafe": "error",
+        "react/no-deprecated": "error",
+        "react/iframe-missing-sandbox": "error",
+        "react/no-access-state-in-setstate": "error",
+        "react/no-invalid-html-attribute": "error",
+        "react/no-unstable-nested-components": "error",
+        "react/no-array-index-key": "error",
+        "react/no-multi-comp": ["error", { "ignoreStateless": true }],
+        "react/no-namespace": "error",
+        "react/no-this-in-sfc": "error",
+        "react/no-typos": "error",
+        "react/style-prop-object": "error",
+        "react/prefer-stateless-function": "error",
+        "react/void-dom-elements-no-children": "error",
+        "react/self-closing-comp": "error",
+        "react/button-has-type": "error",
+        "react/hook-use-state": "error",
+        "react/jsx-no-literals": "error",
+        "react/jsx-no-bind": "error",
+        "react/jsx-no-leaked-render": "error",
+        "react/jsx-no-script-url": "error",
+        "react/jsx-no-useless-fragment": "error",
+        "react/jsx-no-constructed-context-values": "error",
+        "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+        "react/jsx-pascal-case": "error",
+        "react/jsx-no-target-black": [
+          "error",
+          { "warnOnSpreadAttributes": true, "links": true, "forms": true }
+        ]
+      }
+    },
+    {
+      "files": ["*.jsx"],
+      "rules": {
+        "react/prop-types": "off",
+        "security/detect-object-injection": "off",
+        "react-perf/jsx-no-new-function-as-prop": "off"
+      }
+    },
+    {
+      "files": ["*.js"],
+      "extends": ["plugin:jsdoc/recommended-typescript-flavor-error"],
+      "rules": {
+        "jsdoc/require-jsdoc": ["error", { "publicOnly": true }],
+        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/tag-lines": ["error", "any", { "startLines": 1 }],
+        "jsdoc/require-description": [
+          "error",
+          {
+            "checkConstructors": false,
+            "checkGetters": false,
+            "checkSetters": false
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts"],
+      "extends": ["plugin:jsdoc/recommended-typescript-error"],
+      "rules": {
+        "jsdoc/require-jsdoc": ["error", { "publicOnly": true }],
+        "jsdoc/require-description-complete-sentence": "error",
+        "jsdoc/tag-lines": ["error", "any", { "startLines": 1 }],
+        "jsdoc/require-description": [
+          "error",
+          {
+            "checkConstructors": false,
+            "checkGetters": false,
+            "checkSetters": false
+          }
+        ]
+      },
+      "excludedFiles": ["sitemap.ts", "robots.ts"]
+    },
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          { "selector": "variable", "format": ["camelCase", "PascalCase"] },
+          { "selector": "variableLike", "format": ["camelCase"] },
+          {
+            "selector": "memberLike",
+            "modifiers": ["private"],
+            "format": ["camelCase"],
+            "leadingUnderscore": "require"
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["global"],
+            "format": ["UPPER_CASE"]
+          },
+          {
+            "selector": "variable",
+            "modifiers": ["destructured"],
+            "format": ["snake_case", "camelCase", "PascalCase"]
+          },
+          {
+            "selector": "parameter",
+            "modifiers": ["destructured"],
+            "format": ["snake_case", "camelCase", "PascalCase"]
+          },
+          {
+            "selector": "parameter",
+            "format": ["camelCase", "PascalCase"]
+          },
+          {
+            "selector": "parameter",
+            "modifiers": ["unused"],
+            "format": null,
+            "custom": {
+              "regex": "^_*$",
+              "match": true
+            }
+          },
+          {
+            // React function components
+            "selector": "function",
+            "modifiers": ["global"],
+            "format": ["camelCase", "PascalCase"]
+          },
+          {
+            // React function components
+            "selector": "function",
+            "modifiers": ["global", "exported"],
+            "format": ["PascalCase"]
+          },
+          {
+            // React forwardref components
+            "selector": "variable",
+            "modifiers": ["global", "const", "exported"],
+            "format": ["PascalCase"]
+          },
+          {
+            // Next.js exported config
+            "selector": "variable",
+            "modifiers": ["global", "const", "exported"],
+            "filter": {
+              "regex": "(^metadata$)|(^dynamic$)|(^dynamicParams$)|(^revalidate$)|(^fetchCache$)|(^runtime$)|(^preferredRegion$)",
+              "match": true
+            },
+            "format": ["camelCase"]
+          },
+          {
+            // Next.js route handlers
+            "selector": "function",
+            "modifiers": ["exported", "async"],
+            "filter": {
+              "regex": "(^GET$)|(^POST$)|(^PUT$)|(^PATCH$)|(^DELETE$)|(^HEAD$)|(^OPTIONS$)",
+              "match": true
+            },
+            "format": ["UPPER_CASE"]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.config.js",
+        "*.config.ts",
+        "**/config.js",
+        "**/config.ts",
+        "*.preset.js",
+        "*.preset.ts",
+        "*rc.js",
+        "*rc.ts"
+      ],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "unicorn/prefer-module": "off",
+        "jsdoc/require-jsdoc": "off"
+      }
+    }
+  ]
+}
