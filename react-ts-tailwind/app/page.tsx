@@ -1,17 +1,8 @@
 import { PROJECTS } from '@/content/projects';
 import { SOCIALS } from '@/content/socials';
 
-type ContactProps = {
-    title: string;
-    link: string;
-};
-type ProjectProps = {
-    title: string;
-    description: string;
-};
-
 export default function Home() {
-    const contactButtons = SOCIALS.map(({ title, link }: ContactProps) => (
+    const contactButtons = SOCIALS.map(({ title, link }) => (
         <a
             key={title}
             href={link}
@@ -29,9 +20,12 @@ export default function Home() {
         </a>
     ));
 
-    const projectCards = PROJECTS.map(({ title, description }: ProjectProps) => (
-        <button
+    const projectCards = PROJECTS.map(({ title, description, link }) => (
+        <a
             key={title}
+            href={link}
+            target="_blank"
+            rel="noreferrer noopener"
             className="group relative flex cursor-pointer flex-col gap-3 rounded-md border border-solid border-neutral-700 bg-neutral-800 px-8 py-6 text-left"
         >
             <h2 className="text-xl text-neutral-200">{title}</h2>
@@ -42,7 +36,7 @@ export default function Home() {
                 type="image/svg+xml"
                 aria-label="link arrow"
             ></object>
-        </button>
+        </a>
     ));
 
     return (
