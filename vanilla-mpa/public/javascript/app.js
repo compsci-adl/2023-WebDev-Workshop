@@ -81,7 +81,7 @@ function displayMessages() {
             comments[i].nLikes += comments[i].hasLiked ? -1 : 1;
             comments[i].hasLiked = !comments[i].hasLiked;
             fetch('/api/comments/like_comment?id=' + comments[i].id, {
-                method: 'POST'
+                method: 'POST',
             });
             likesElement.innerText = `${comments[i].nLikes} likes`;
         });
