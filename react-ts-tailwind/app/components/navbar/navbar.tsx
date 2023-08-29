@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -16,7 +16,7 @@ export default function Navbar() {
                                 pathname === '/' ? 'opacity-100' : 'opacity-40'
                             }`}
                         >
-                            home
+                            {'home'}
                         </Link>
                     </li>
                     <li>
@@ -26,7 +26,7 @@ export default function Navbar() {
                                 pathname === '/guestbook' ? 'opacity-100' : 'opacity-40'
                             }`}
                         >
-                            guestbook
+                            {'guestbook'}
                         </Link>
                     </li>
                 </ul>

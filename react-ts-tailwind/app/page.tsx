@@ -12,11 +12,11 @@ export default function Home() {
         >
             {title}
             <object
-                className="h-3 w-5 translate-y-[0.05rem] pl-2 transition-transform duration-100 ease-linear group-hover:translate-x-[0.1rem] group-hover:translate-y-[-0.1rem]"
+                className="h-3 w-5 translate-y-[0.35rem] pl-2 transition-transform duration-100 ease-linear group-hover:translate-x-[0.2rem] group-hover:translate-y-[0.18rem]"
                 data="/assets/diagonal-arrow.svg"
                 type="image/svg+xml"
                 aria-label="link arrow"
-            ></object>
+            />
         </a>
     ));
 
@@ -35,27 +35,27 @@ export default function Home() {
                 data="/assets/diagonal-arrow.svg"
                 type="image/svg+xml"
                 aria-label="link arrow"
-            ></object>
+            />
         </a>
     ));
 
     return (
         <main>
             <section id="greeting" className="flex flex-col gap-8 pb-8">
-                <h1 className="text-3xl text-neutral-200 md:text-4xl">Hey, I&apos;m John Doe 👋</h1>
+                <h1 className="text-3xl text-neutral-200 md:text-4xl">{`Hey, I'm John Doe 👋`}</h1>
                 <p>
-                    I&apos;m a computer science student at Adelaide University and a freelance
+                    {`I'm a computer science student at Adelaide University and a freelance
                     software engineer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                    do eiusmod tempor incididunt ut labore et dolore.`}
                 </p>
                 <div className="flex flex-col gap-6 sm:flex-row">{contactButtons}</div>
             </section>
             <section id="projects" className="flex flex-col gap-8">
                 <p>
-                    I get busy in my spare time working on personal projects. Ut enim ad minim
+                    {`I get busy in my spare time working on personal projects. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. You can see some of my faviourites below.
+                    dolore eu fugiat nulla pariatur. You can see some of my favourites below.`}
                 </p>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
                     {projectCards}

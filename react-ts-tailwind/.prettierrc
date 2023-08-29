@@ -1,5 +1,9 @@
 {
-
+  "plugins": [
+    "prettier-plugin-sort-imports",
+    "prettier-plugin-jsdoc",
+    "prettier-plugin-tailwindcss"
+  ],
   "pluginSearchDirs": false,
   "trailingComma": "es5",
   "bracketSpacing": true,
@@ -23,7 +27,16 @@
   "importTypeOrder": ["NPMPackages", "localImportsValue", "localImportsType"],
   "overrides": [
     {
-      "files": ["*.yaml", "*.yml", "*.json", "*.config.{js,ts}", "*rc", "*rc.{js,ts}"],
+      "files": [
+        "*.yaml",
+        "*.yml",
+        "*.json",
+        "*.config.{js,ts}",
+        "*rc",
+        "*rc.{js,ts}",
+        ".clang-format",
+        "site.webmanifest"
+      ],
       "options": {
         "tabWidth": 2
       }

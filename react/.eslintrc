@@ -76,7 +76,7 @@
         "no-empty-function": ["error", { "allow": ["arrowFunctions", "methods", "constructors"] }],
         "no-invalid-this": "error",
         "no-implicit-coercion": "error",
-        "no-mixed-operators": "off",
+        "no-mixed-operators": "off", // Conflicts with prettier
         "no-multi-assign": "error",
         "no-nested-ternary": "error",
         "no-return-assign": "error",
@@ -95,7 +95,7 @@
         "no-unused-vars": ["error", { "ignoreRestSiblings": true }],
         "no-param-reassign": ["error", { "props": false }],
         "array-callback-return": "error",
-        "new-cap": ["error", { "capIsNewExceptions": [] }], // Ignore Next.js fonts
+        "new-cap": ["error", { "capIsNew": false }],
         "operator-assignment": ["error", "always"],
         "require-atomic-updates": "error",
         "prefer-rest-params": "error",
@@ -275,7 +275,7 @@
       }
     },
     {
-      "files": ["*.jsx", ".tsx"],
+      "files": ["*.jsx", "*.tsx"],
       "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
@@ -283,8 +283,8 @@
         "plugin:react-hooks/recommended",
         "plugin:react-perf/all"
       ],
-      "settings": {
-        "import/core-modules": ["styled-jsx/css"],
+      "plugins": ["react-perf"],
+      "rules": {
         "react/no-danger": "error",
         "react/no-unsafe": "error",
         "react/no-deprecated": "error",
@@ -304,25 +304,27 @@
         "react/button-has-type": "error",
         "react/hook-use-state": "error",
         "react/jsx-no-literals": "error",
-        "react/jsx-no-bind": "error",
+        "react/jsx-no-bind": ["error", { "allowArrowFunctions": true }],
         "react/jsx-no-leaked-render": "error",
         "react/jsx-no-script-url": "error",
         "react/jsx-no-useless-fragment": "error",
         "react/jsx-no-constructed-context-values": "error",
         "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
         "react/jsx-pascal-case": "error",
-        "react/jsx-no-target-black": [
+        "react/jsx-no-target-blank": [
           "error",
           { "warnOnSpreadAttributes": true, "links": true, "forms": true }
-        ]
-      }
-    },
-    {
-      "files": ["*.jsx"],
-      "rules": {
-        "react/prop-types": "off",
-        "security/detect-object-injection": "off",
-        "react-perf/jsx-no-new-function-as-prop": "off"
+        ],
+        "react-perf/jsx-no-new-object-as-prop": "off",
+        "react-perf/jsx-no-new-array-as-prop": "off",
+        "react-perf/jsx-no-new-function-as-prop": "off",
+        "react-perf/jsx-no-jsx-as-prop": "off",
+        "react/prop-types": "off"
+      },
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
       }
     },
     {
@@ -411,7 +413,7 @@
             // React function components
             "selector": "function",
             "modifiers": ["global", "exported"],
-            "format": ["PascalCase"]
+            "format": ["camelCase", "PascalCase"]
           },
           {
             // React forwardref components

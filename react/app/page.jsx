@@ -61,7 +61,7 @@ export default function Home() {
                 data="/assets/diagonal-arrow.svg"
                 type="image/svg+xml"
                 aria-label="link arrow"
-            ></object>
+            />
         </a>
     ));
 
@@ -79,27 +79,27 @@ export default function Home() {
                 data="/assets/diagonal-arrow.svg"
                 type="image/svg+xml"
                 aria-label="link arrow"
-            ></object>
+            />
         </a>
     ));
 
     return (
         <main>
             <section id="greeting" className={styles.greeting}>
-                <h1 className={styles.greetingTitle}>Hey, I&apos;m John Doe 👋</h1>
+                <h1 className={styles.greetingTitle}>{`Hey, I'm John Doe 👋`}</h1>
                 <p>
-                    I&apos;m a computer science student at Adelaide University and a freelance
+                    {`I'm a computer science student at Adelaide University and a freelance
                     software engineer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore.
+                    do eiusmod tempor incididunt ut labore et dolore.`}
                 </p>
                 <div className={styles.contactButtons}>{contactButtons}</div>
             </section>
             <section id="projects" className={styles.projects}>
                 <p>
-                    I get busy in my spare time working on personal projects. Ut enim ad minim
+                    {`I get busy in my spare time working on personal projects. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. You can see some of my faviourites below.
+                    dolore eu fugiat nulla pariatur. You can see some of my favourites below.`}
                 </p>
                 <div className={styles.projectCards}>{projectCards}</div>
             </section>

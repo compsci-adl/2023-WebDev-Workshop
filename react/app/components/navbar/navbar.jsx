@@ -1,8 +1,8 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import styles from './navbar.module.css';
-import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -17,7 +17,7 @@ export default function Navbar() {
                                 pathname === '/' ? styles.activeLink : ''
                             }`}
                         >
-                            home
+                            {'home'}
                         </Link>
                     </li>
                     <li>
@@ -27,7 +27,7 @@ export default function Navbar() {
                                 pathname === '/guestbook' ? styles.activeLink : ''
                             }`}
                         >
-                            guestbook
+                            {'guestbook'}
                         </Link>
                     </li>
                 </ul>
