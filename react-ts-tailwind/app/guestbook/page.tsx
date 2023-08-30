@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-import Comment from '../components/comment/comment';
+import Comment from '../../components/comment/comment';
 import type { FormEvent } from 'react';
-import type { CommentData, CommentProps } from '../components/comment/comment';
+import type { CommentData, CommentProps } from '../../components/comment/comment';
 
 export default function GuestBook() {
     /* TODO explain useState and how its different from the vanilla approach */
