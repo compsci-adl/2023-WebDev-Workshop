@@ -3,7 +3,7 @@ import Navbar from '../components/navbar/navbar';
 import '../styles/globals.css';
 import type { Metadata } from 'next';
 
-const INTER = Inter({ subsets: ['latin'] });
+const INTER = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
     title: 'Create Next App',

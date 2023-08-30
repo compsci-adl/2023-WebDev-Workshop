@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import Navbar from './components/navbar/navbar.jsx';
 import './styles/globals.css';
 
-const INTER = Inter({ subsets: ['latin'] });
+const INTER = Inter({ subsets: ['latin'], display: 'swap' });
 
 /* Briefly explain layout.js and why it helps with things like global navbar */
 export default function RootLayout({ children }) {

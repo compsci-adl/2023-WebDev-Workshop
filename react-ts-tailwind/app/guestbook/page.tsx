@@ -4,26 +4,24 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import Comment from '../../components/comment/comment';
 import type { FormEvent } from 'react';
-import type { CommentData, CommentProps } from '../../components/comment/comment';
+import type { CommentData } from '../../components/comment/comment';
 
 export default function GuestBook() {
     /* TODO explain useState and how its different from the vanilla approach */
-    const [comments, setComments] = useState<CommentProps[]>([]);
+    const [comments, setComments] = useState<CommentData[]>([]);
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         const newComment = {
-            comment: {
-                /* Creating a unique id for each comment using nanoid.
+            /* Creating a unique id for each comment using nanoid.
                 Normally this would be generated server-side by the database
                 but it's here for demonstration purposes*/
-                id: nanoid(),
-                name: data.get('name')?.toString() ?? '',
-                content: data.get('content')?.toString() ?? '',
-                nLikes: 0,
-            } satisfies CommentData,
-        };
+            id: nanoid(),
+            name: data.get('name')?.toString() ?? '',
+            content: data.get('content')?.toString() ?? '',
+            nLikes: 0,
+        } satisfies CommentData;
 
         setComments([...comments, newComment]);
         event.currentTarget.reset();
@@ -60,7 +58,7 @@ export default function GuestBook() {
 
             <section id="guestbook-comments" className="flex flex-col gap-4 pt-8">
                 {comments.map((currComment) => (
-                    <Comment key={currComment.comment.id} comment={currComment.comment} />
+                    <Comment key={currComment.id} comment={currComment} />
                 ))}
             </section>
         </main>
