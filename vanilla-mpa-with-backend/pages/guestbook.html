@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guestbook</title>
+        <meta name="description" content="Guestbook for the web dev workshop" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <!-- TODO only introduce preload later after show issue with reloading, with styles and arrow icon -->
+        <link href="css/global.css" rel="preload" as="style" />
+        <link href="css/guestbook.css" rel="preload" as="style" />
+        <link href="css/preflight.css" rel="preload" as="style" />
+        <link href="css/global.css" rel="stylesheet" />
+        <link href="css/guestbook.css" rel="stylesheet" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <script src="javascript/app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/" rel="noreferrer noopener">home</a>
+                    </li>
+                    <li>
+                        <a class="active-link" rel="noreferrer noopener">guestbook</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="guestbook-title">Sign my guestbook ✍️</h1>
+            <form id="submit-form" class="inputs">
+                <label for="guestbook-name">Your name</label>
+                <input name="name" class="guestbook-input" type="text" maxlength="20" required />
+                <label for="guestbook-message">Message</label>
+                <input name="content" class="guestbook-input" type="text" maxlength="50" required />
+                <input id="guestbook-button" type="submit" value="submit" />
+            </form>
+            <section id="guestbook-comments"></section>
+        </main>
+    </body>
+</html>

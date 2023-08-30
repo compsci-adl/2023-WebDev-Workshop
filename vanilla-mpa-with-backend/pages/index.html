@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Web Dev Workshop</title>
+        <meta name="description" content="Website for the web dev workshop" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <!-- TODO only introduce preload later after show issue with reloading, with styles -->
+        <link href="css/global.css" rel="preload" as="style" />
+        <link href="css/preflight.css" rel="preload" as="style" />
+        <link href="css/global.css" rel="stylesheet" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="active-link" rel="noreferrer noopener">home</a>
+                    </li>
+                    <li>
+                        <a href="guestbook" rel="noreferrer noopener">guestbook</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="greeting">
+                <h1 class="greeting-title">Hey, I'm John Doe 👋</h1>
+                <p>
+                    I'm a computer science student at Adelaide University and a freelance software
+                    engineer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore.
+                </p>
+                <div class="contact-buttons">
+                    <a href="mailto:contact@csclub.org.au" target="_blank" rel="noreferrer noopener"
+                        >Email Me
+                        <object
+                            class="arrow-icon"
+                            data="assets/diagonal-arrow.svg"
+                            type="image/svg+xml"
+                        ></object>
+                    </a>
+                    <a
+                        href="https://linkedin.com/company/compsci-adl"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        >LinkedIn
+                        <object
+                            class="arrow-icon"
+                            data="assets/diagonal-arrow.svg"
+                            type="image/svg+xml"
+                        ></object
+                    ></a>
+                    <a
+                        href="https://github.com/compsci-adl"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        >GitHub
+                        <object
+                            class="arrow-icon"
+                            data="assets/diagonal-arrow.svg"
+                            type="image/svg+xml"
+                        ></object
+                    ></a>
+                </div>
+            </section>
+            <section id="projects">
+                <p>
+                    I get busy in my spare time working on personal projects. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. You can see some of my favourites below.
+                </p>
+                <div class="project-cards">
+                    <a
+                        class="project"
+                        href="https://github.com/compsci-adl/Constitution"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <h2>Constitution</h2>
+                        <p>
+                            Constitution for the Computer Science Club of the University of
+                            Adelaide, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt
+                        </p>
+                        <object data="assets/diagonal-arrow.svg" type="image/svg+xml"></object>
+                    </a>
+                    <a
+                        class="project"
+                        href="https://github.com/compsci-adl/DuckCTF"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <h2>Duck CTF</h2>
+                        <p>
+                            Challenge repository for DuckCTF 2022 and 2023, lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <object data="assets/diagonal-arrow.svg" type="image/svg+xml"></object>
+                    </a>
+                    <a
+                        class="project"
+                        href="https://github.com/compsci-adl/website"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <h2>Website</h2>
+                        <p>
+                            The Computer Science Club's website repository, lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <object data="assets/diagonal-arrow.svg" type="image/svg+xml"></object>
+                    </a>
+                    <a
+                        class="project"
+                        href="https://github.com/compsci-adl/CsClub-Registration-App"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <h2>Registration App</h2>
+                        <p>
+                            An app to collect CS Club user registrations, lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <object data="assets/diagonal-arrow.svg" type="image/svg+xml"></object>
+                    </a>
+                    <a
+                        class="project"
+                        href="https://github.com/compsci-adl/CsClub-TicTacToe"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <h2>TicTacToe</h2>
+                        <p>
+                            Game of Tic Tac Toe for club recruiting events, lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <object data="assets/diagonal-arrow.svg" type="image/svg+xml"></object>
+                    </a>
+                    <a
+                        class="project"
+                        href="https://github.com/compsci-adl/utils"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <h2>Utils</h2>
+                        <p>
+                            Miscellaneous utilities used by the CS Club, lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
+                        <object data="assets/diagonal-arrow.svg" type="image/svg+xml"></object>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
