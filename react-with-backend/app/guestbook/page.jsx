@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
-import Comment from '../components/comment/comment.jsx';
+import Comment from '../../components/comment/comment.jsx';
 import styles from './page.module.css';
 
 export default function GuestBook() {
