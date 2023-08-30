@@ -6,6 +6,7 @@ import styles from './navbar.module.css';
 
 export default function Navbar() {
     const pathname = usePathname();
+
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
