@@ -51,7 +51,7 @@ form.addEventListener('submit', async (event) => {
 
 function displayMessages() {
     commentsSection.replaceChildren();
-    console.log(comments);
+
     for (const [i, { name, content, nLikes }] of comments.entries()) {
         const commentElement = document.createElement('div');
         const nameElement = document.createElement('h3');

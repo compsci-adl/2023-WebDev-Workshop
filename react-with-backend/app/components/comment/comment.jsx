@@ -10,8 +10,6 @@ export default function Comment({ comment }) {
         // setLikes((comment.nLikes += hasLiked ? -1 : 1));
         setLikes((nLikes) => nLikes + (hasLiked ? -1 : 1));
 
-        console.log(comment);
-
         fetch('/api/comments/like_comment', {
             headers: {
                 Accept: 'application/json',
