@@ -1,0 +1,39 @@
+/* nav {
+    position: sticky;
+} */
+
+.header {
+    /* width: 80vw; */
+    /* width: 50rem; */
+    width: min(50rem, 80vw);
+}
+
+.nav {
+    padding-top: 4rem;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.link {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--text-active);
+    /* color: var(--text-inactive); TODO explain why not transition colour here */
+    /* transition: color 1s ease; */
+    opacity: 0.4;
+    transition: opacity 0.2s ease;
+}
+
+/* nav ul li a.active-link,
+nav ul li a:hover {
+    color: var(--text-active);
+} */
+
+.link.activeLink,
+.link:hover {
+    opacity: 1;
+}

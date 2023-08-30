@@ -1,0 +1,51 @@
+{
+  "name": "react-ts-tailwind",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.15",
+    "nanoid": "^4.0.2",
+    "next": "13.4.19",
+    "postcss": "8.4.28",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "zact": "^0.0.2",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^13.4.18",
+    "@types/node": "20.5.4",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.16",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-formatter-pretty": "5.0.0",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "46.2.6",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-no-unsanitized": "4.0.2",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-perf": "3.3.1",
+    "eslint-plugin-security": "1.7.1",
+    "eslint-plugin-sonarjs": "0.19.0",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "eslint-plugin-unicorn": "47.0.0",
+    "prettier-plugin-jsdoc": "^1.0.1",
+    "prettier-plugin-sort-imports": "^1.7.2",
+    "prettier-plugin-tailwindcss": "^0.5.3"
+  }
+}
